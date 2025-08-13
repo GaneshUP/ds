@@ -19,7 +19,7 @@ func countDigits(n int) int {
 	n = int(math.Abs(float64(n))) // Ensure n is positive
 	// Count the number of digits
 	for n > 0 {
-		n = int(math.Floor(float64(n) / 10))
+		n /= 10 // Remove the last digit
 		count++
 	}
 	return count
